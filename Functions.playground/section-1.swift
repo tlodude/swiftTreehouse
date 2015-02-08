@@ -1,18 +1,18 @@
-// Playground - noun: a place where people can play
+// Functions - named parameters
 
 import UIKit
 
 println("Swift Functions")
 
-func calculateArea(height: Int, width: Int) -> Int {
+func calculateArea(#height: Int, #width: Int) -> Int {
     return height * width
 }
 
 
-calculateArea(10, 12)
-
-println("Area = \(calculateArea(10, 12))")
 
 
-calculateArea(1000, 1200)
+println("Area = \(calculateArea(height: 10, width: 12))")
+
+
+calculateArea(height: 1000, width: 1200)
 
