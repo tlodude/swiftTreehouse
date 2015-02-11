@@ -30,7 +30,11 @@ class Clothing: Product {
     
     init(title: String, price: Double, designer: String) {
         self.designer = designer
-        super.init(title: title, price: price)
+        super.init (title: title, price: price)
+    }
+    
+    convenience init (title: String) {
+        self.init(title:title,price:99,designer:"Calvin Klein")
     }
     
     override func discountedPrice(_ percentage: Double = 10.0) -> Double {
@@ -39,9 +43,12 @@ class Clothing: Product {
     
 }
 
-var tshirt = Clothing(title: "Vintage", price: 49.99, designer: "Prada")
+var tshirt = Clothing(title: "Vintage")
 tshirt.title
 tshirt.price
+tshirt.designer
 tshirt.discountedPrice()
 tshirt.size
+
+let quadcopter = Product(title: "Quadcopter", price: 499.99)
 
